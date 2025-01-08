@@ -4,12 +4,11 @@ import subprocess
 
 
 get_tag_cmd= "git log --simplify-by-decoration --decorate --tags --oneline master | grep 'tag:' | sed -E 's/.*tag: ([^,)]+).*/\\1/' | head -n1"
-#get_tag_cmd = "git log --simplify-by-decoration --decorate --tags --oneline master | grep 'tag:' | sed -E 's/.*tag: ([^,)]+).*/\1/' | head -n1"
 old_git_tag = subprocess.check_output(get_tag_cmd, shell=True, text=True).strip()
-git_diff_cmd = 'git log '+old_git_tag+'..HEAD --no-merges --pretty=format:"%s%n%b- %aN (%h)%n"'
-result = subprocess.check_output(git_diff_cmd, shell=True, text=True)
+#git_diff_cmd = 'git log '+old_git_tag+'..HEAD --no-merges --pretty=format:"%s%n%b- %aN (%h)%n"'
+#result = subprocess.check_output(git_diff_cmd, shell=True, text=True)
 
-print(result)
+#print(result)
 
 repo = git.Repo('.')
 changed = False
