@@ -5,7 +5,7 @@ repo = git.Repo('.')
 changed = False
 
 # Get the diff between HEAD and specified commit/tag
-diff = repo.git.diff('HEAD', '4436b2bbe08f1a18fc25c15e7b73f01cf524e3ec', '--', 'entri/ui/static_design_revamp/north_south/sass/')
+diff = repo.git.diff('HEAD', 'ef27661bc4c4f03ca9a95d55091ed28df705eba4', '--', 'entri/ui/static_design_revamp/north_south/sass/')
 
 if diff:
     # Changes exist in the directory
